@@ -1,7 +1,7 @@
 <template>
     <div id="app">
       <HeaderApp @searchMovie="getMovie"/>
-      <MainApp/>
+      <MainApp />
     </div>
 </template>
 
