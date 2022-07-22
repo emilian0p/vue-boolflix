@@ -1,33 +1,24 @@
 <template>
     <header>
-        <div>
             <div>
-                <nav>
-                    <img src="../assets/netflix-logo.png" alt="">
-                    <input type="text" v-model="searchText">
-                    <button @click="getMovie()">Cerca</button>
-                </nav>
+                <img src="../assets/netflix-logo.png" alt="">
             </div>
-        </div>
+            <input type="text" placeholder="Search" v-model="needle">
+            <button @click="$emit('searchMovie', needle)">Cerca</button>
+
     </header>
-</template> 
+</template>
 
 <script>
 export default {
-    name: 'HeaderApp',
-    data() {
+    data: function() {
         return {
-            searchText: '',
+            needle: '',
         }
     },
-    methods : {
-        getMovie: function() {
-            this.$emit('searchMovie', this.searchText);
-        }
-    }
 }
 </script>
 
-<style lang="scss">
+<style>
 
 </style>

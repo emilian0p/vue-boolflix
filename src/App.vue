@@ -1,43 +1,40 @@
 <template>
-    <div id="app">
-      <HeaderApp @searchMovie="getMovie"/>
-      <MainApp />
-    </div>
+  <div id="app">
+    <HeaderApp @searchMovie="getMovies"/>
+    <MainApp :movies="movies" />
+  </div>
 </template>
 
 <script>
+import axios from 'axios';
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
-import axios from 'axios';
 
 export default {
-  name: 'App',
-  components: {
+  components : {
     HeaderApp,
     MainApp
   },
-  data() {
+  data: function() {
     return {
-      moviesArray: [],
-      apiCallback: 'https://api.themoviedb.org/3/search/movie?api_key=762e8d8371364239e7194e5712ca4d7b&query=',
+      apiKey : '105531e0b71d5b1984d1ce28e4125c24',
+      apiUrl : 'https://api.themoviedb.org/3/search/movie',
+      movies: [],
     }
   },
   methods: {
-    getMovie: function(search) {
-      axios.get(this.apiCallback + search)
-      .then(response => {
-        console.log(response.data.results);
-        this.moviesArray = response.data.results;
+    getMovies(needle) {
+      axios.get(`${this.apiUrl}?api_key=${this.apiKey}&query=${needle}`)
+      .then(result => {
+        console.log(result.data.results);
+        this.movies = result.data.results;
       })
       .catch(error => {
-        console.warn(error);
+        console.log(error);
       });
     }
-  },
-  created(){
-      this.getMovie();
   }
-
+    
 }
 </script>
 

@@ -1,17 +1,13 @@
 <template>
-    <div>
-        <MovieList />
-    </div>
+    <main>
+        {{ movies }}
+    </main>
 </template>
 
 <script>
-import MovieList from './MovieList.vue';
 export default {
-    components: {
-        MovieList
-    }
+    props : ['movies'],
 }
-
 </script>
 
 <style>
