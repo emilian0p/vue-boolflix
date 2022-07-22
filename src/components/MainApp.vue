@@ -1,12 +1,22 @@
 <template>
     <main>
-        {{ movies }}
+        <MovieCard v-for="movie in movies" :key="movie.id" :movie="movie"/>
     </main>
 </template>
 
 <script>
+import MovieCard from './MovieCard.vue';
+
 export default {
-    props : ['movies'],
+    components:{
+        MovieCard
+    },
+    props: {
+        movies: {
+            type: Array,
+            required: true,
+        },
+    },
 }
 </script>
 
