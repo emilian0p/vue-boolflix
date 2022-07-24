@@ -18,6 +18,11 @@ export default {
             required: true,
         },
     },
+    methods: {
+        outOfFive: function(vote) {
+            return Math.round(vote / 2);
+        },
+    }
 }
 </script>
 

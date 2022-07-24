@@ -38,4 +38,5 @@ export default {
 </script>
 
 <style>
+/* @import '~fortawesome/fontawesome-free/css/all.css'; non lo legge*/
 </style>
