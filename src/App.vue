@@ -4,7 +4,6 @@
     <MainApp
     :movies="movies" 
     :series='series'/>
-
   </div>
 </template>
 
@@ -57,7 +56,7 @@ export default {
 }
 </script>
 
-<style>
-/* @import '~fortawesome/fontawesome-free/css/all.css'; non lo legge
-*/
+<style lang="scss">
+/* @import "~@fortawesome/"; */
+@import "./style/common.scss";
 </style>

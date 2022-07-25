@@ -26,8 +26,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+ul{
+    margin-bottom: 20px;
+}
 li {
     list-style: none;
+    color: #fff;
+    padding-bottom: 5px;
+}
+h3{
+    color: #fff;
 }
 </style>

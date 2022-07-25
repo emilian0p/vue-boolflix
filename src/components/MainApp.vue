@@ -23,4 +23,8 @@ export default {
 </script>
 
 <style>
+main{
+    display: flex;
+    
+}
 </style>
