@@ -14,7 +14,9 @@ export default {
     props: {
         movies: {
             type: Array,
-            required: true,
+        },
+        series: {
+            type: Array,
         },
     },
 }
