@@ -25,6 +25,9 @@ export default {
 <style>
 main{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
 }
 </style>
